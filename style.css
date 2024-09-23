@@ -1,0 +1,11 @@
+:root {
+    --qora: #FEE2E2;
+    --oq: #000000;
+}
+
+.dark {
+    --qora: #000000;
+}
+.light {
+    --oq: #FEE2E2;
+}

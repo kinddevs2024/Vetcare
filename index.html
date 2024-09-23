@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: '50px',
+                        sm: '2rem',
+                        lg: '4rem',
+                        xl: '5rem',
+                        '2xl': '6rem',
+                    },
+                },
+                extend: {
+                    colors: {
+                        qora: 'var(--qora)',
+                        oq: 'var(--oq)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class=" bg-qora bg-oq gap-10">
+
+
+
+    <div role="status"
+        class="spinning-icon w-full h-full justify-center items-center flex text-center bg-red-100 mt-[300px]">
+        <svg aria-hidden="true"
+            class=" w-[15%]  text-gray-200 animate-spin dark:text-gray-600 fill-orange-400 flex justify-center items-center"
+            viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                fill="currentColor" />
+            <path
+                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                fill="currentFill" />
+        </svg>
+        <span class="sr-only">Loading...</span>
+
+    </div>
+
+    <div class="page bg-qora hidden">
+        <header
+            class=" container  relative bg-qora flex p-[40px] justify-evenly w-full h-[40px] items-center   md:justify-between">
+            <div
+                class="w-full h-full bg-qora  flex items-center justify-evenly md:justify-between m-3 sticky z-0  gap-10 md:gap-1 ">
+                <a href="index.html">
+                    <h1 class="text-green-500 flex font-black text-3xl">
+                        <p class="text-orange-400 font-black text-3xl">Vet</p>care
+                    </h1>
+                </a>
+
+                <ul class="text-red-50 hidden gap-[20px] lg:gap-3 md:flex ml-4 mr-4">
+                    <li class="text-xl font-semibold leading-7 text-center mt-1 text-gray-800 cursor-alias">Start</li>
+                    <li class="text-xl font-semibold leading-7 text-center mt-1 text-gray-800 cursor-alias">Services
+                    </li>
+                    <li class="text-xl font-semibold leading-7 text-center mt-1 text-gray-800 cursor-alias">About</li>
+                    <li class="text-xl font-semibold leading-7 text-center mt-1 text-gray-800 cursor-alias">News</li>
+                    <li class="text-xl font-semibold leading-7 text-center mt-1 text-gray-800 cursor-alias">Contact</li>
+                </ul>
+                <div class="flex md:hidden mt-1">
+
+
+                    <label class="relative z-40 cursor-pointer px-3 py-6" for="mobile-menu">
+                        <input class="peer hidden" type="checkbox" id="mobile-menu" />
+                        <div
+                            class="relative z-50 block h-[1px] w-7 bg-red-100 bg-transparent content-[''] before:absolute before:top-[-0.35rem] before:z-50 before:block before:h-full before:w-full before:bg-gradient-to-t from-orange-400 to-red-400 before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:right-0 after:bottom-[-0.35rem] after:block after:h-full after:w-full after:bg-orange-400 after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:w-full before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:bottom-0 after:peer-checked:w-full after:peer-checked:-rotate-45 after:peer-checked:transform">
+                        </div>
+                        <div
+                            class="fixed inset-0 z-40 hidden h-full w-full bg-red-100 backdrop-blur-sm peer-checked:block">
+                            &nbsp;
+                        </div>
+                        <div
+                            class="fixed top-0 right-0 z-40 h-full w-full translate-x-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-x-0">
+                            <div class="float-right min-h-full w-[85%] bg-white px-6 pt-12 shadow-2xl">
+                                <menu>
+                                    <li><a href="/Start">Start</a></li>
+                                    <li><a href="/Services">Services</a></li>
+                                    <li><a href="/About">About</a></li>
+                                    <li><a href="/News">News</a></li>
+                                    <li><a href="/Contact">Contact</a></li>
+                                    <li><a class=" p-1.5  text-xl bg-gradient-to-b from-orange-300  to-orange-400 text-transparent justify-center text-center items-center text-white leading-7 hidden md:flex mt-1   rounded-2xl frnt-bold  "
+                                            href=""></a>
+
+                                        384-129-293-39
+                                    </li>
+                                </menu>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="flex justify-center items-center gap-5">
+                    <button
+                        class=" p-1.5   text-xl bg-gradient-to-b from-orange-300  to-orange-400 text-transparent justify-center text-center items-center text-white leading-7 hidden md:flex mt-1   rounded-2xl frnt-bold  ">
+                        384-129-293-39
+
+
+
+                    </button>
+                    <div class="mt-2">
+                        <button type="button"
+                            class="text-white spinning-i bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm w-10 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                            id="dark"><img
+                                src="https://cdn3.iconfinder.com/data/icons/meteocons/512/moon-symbol-512.png"
+                                alt="dark icon"></button>
+                        <button type="button"
+                            class=" spinning- text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 w-10 font-medium rounded-lg text-sm  dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 "
+                            id="light"><img
+                                src="https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_2-256.png"
+                                alt="lighticon"></button>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+    </div>
+
+    </div>
+    <!-- header -->
+    <img class="absolute z-0 top-[240px] left-[300px] xl:left-[106.63px]  lg:left-[] md:left-[500px] sm:left-[16.63px] w-[80px] h-[80px] "
+        src="https://s3-alpha-sig.figma.com/img/0b42/3510/315239930ed81f9d6ec8acbeb8e2333e?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BPHx9FrjSOXKyOj9JIBBVANPkssxjzaKlyZKddgDUYfjBOWnhB5jakbybSnydNzpyeOzkJPb7OCxFxVcRg8fxjHlEnumJ2Wai~wnYuU9OBNB53YryyuzeYLsjR5g8FQok4IIKYFk5~hrVQIIJQLcDflennuqvPRlv5ZVFYGbZub15WjaQKPtfKR9ykGpIyIfriYcvHtdFFmVLt-hE~qPIADBrUOtHS9kwdQj8ohgcdavL-dvQse1F-v8yr-VwJaPYL2Nr6I4nJl1pSPTSE8~2a6VTe0nXL1vBtFVXyHRrHoGpTQiSy7dc9CRegBK3B6m58FGknpHwbrS538bSMN-Aw__"
+        alt="pozition">
+    <img class="absolute z-0 top-[292px] left-[20px]  xl:left-[]  lg:left-[] md:left-[70px] sm:left-[105px] w-[43px] h-[45px]"
+        src="https://s3-alpha-sig.figma.com/img/5016/4d74/452e525c991559f8fd2cd2721c253286?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QqvlRBrZzl~8U6horuOof7r7QsTubrzArjGHIWSg73QEsN48P1uwXAGmfTqE1HCK3YZJ5~5NbtPF8LhIjm5iFeGAk0DQ-gDlYdFeCwVW2PLaJ5vp26Z9eMT2jNVO9LuHzISN8Ee43ozhdIojOcMve668gj5vAnPnZpryx2cUKWeSAG4fHYGDbpDFLuI8DAL2-KL4byPtPSPtqY88zz4FZZx07nY0yoVQCoEb~fyvRuDNyJsOSFpc4kvoVXXPT5-gIsQLItvIiecIm6MUXMq8V9qpzT5Nr3lc9IjuhV7fbJYv4vdDmPBsUWz42AgkIE1vhOM6t4iVWNJK0xNKFDpHjA__"
+        alt="pozition">
+    <img class="absolute z-0 top-[599px] left-[300px]  xl:left-[]  lg:left-[] md:left-[50px] sm:left-[162px] w-[87px] h-[88px]"
+        src="https://s3-alpha-sig.figma.com/img/0b54/d8ba/612717780cc7e2c91c6a6000cb676157?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LIvc~denhTI4ae9uH45dNHAE1cmc26PrfKh-~5~wM8EAiBsvq2jptC~nvIglptGCoYElTKvnovB8L83f~2o9NU33rRBtP2axfL2o~jYemMVQWwqeVOYIbrDs-6vwAE3X0xq8XHn2LsTmooMhMFEjLR7RR-GMAR2TeSNFooZAkqtXmiFIZzoP0KlvkE6BABiBI0UL1uVCS~eTzpFn~vMsE6IVz~767lK4fBm3PAgSXU2xvnmpsYj-chNiA5kUXJbznGs56KuOdq8RqHMMSjneoKXfmQ0mz7ubFEGcgLfbUUP~cpUlMBR9OcigqDoGYyikWblENuqKqEbAe-sEg6EPew__"
+        alt="pozition">
+    <img class="absolute z-0 top-[672.42px] left-[50px]  xl:left-[]  lg:left-[] md:left-[400px] sm:left-[134.17px] w-[90px] h-[91px]"
+        src="https://s3-alpha-sig.figma.com/img/6b50/7215/790a92ea356327cb652e22276c6e7fe7?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G84q9XtJlXftla3LkGktNgzmGUjo3TBVKRxIXzfl6gKB8jxH1kXmA6MwkR8CC6GaFgW3r-riBWvUFJmPpOPEUepzWNepWuixJhijI~5jAX0r3wkYzF1nGWiq3YIKfLg-MvJUeiOcwZw67rII-tNRXdKrDZEZYfi0CXXHIAOFvOEhbQEFm3XkfXJDJiaEv4D44s20HgacP-v3rU9mewVZVeQ1hkXlhktCmqOQmGNP1OBMI1cAS7-w1ByT961hIUdjCsm-MEbnpmRRYSq1cmqQRo63gWNn~i9io-5bOFhjngtfchaCEwOl4-c9pjknSK76nk~T1Ld5ary4Q5TprrBhmA__"
+        alt="pozition">
+    <img class="absolute z-0 top-[1957px] left-[50px]  xl:left-[]  lg:left-[] md:left-[500px] sm:left-[120px] w-[66px] h-[75px]"
+        src="https://s3-alpha-sig.figma.com/img/8d78/1e7b/c23f52b32def3809dae88c16e5020951?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BC7l74TAsPGOPbKlz5PiJdJ9mF7FyXIzSGH7qR7fph0c8Cliib7ejmf8TywjvwsQthlYvbvF~UoOZfs8p4oFy6HDKzOKikTHniu8wGAweS-m555R2G~rAkL7BFa-IriYRN-CC2c0hQtKwisSGhs3R6JmttupVsDOKEl-FdjZpNdKqz3WBpYoJj8PQt0Jfr8HYKP-JLIWVYmmSMjt8NF6KLP1KF1u2~aRvao84IJGa-8DBIc5zut0AlW8XlFyAjap03FiAMwrY5jsnIGtXO64JUadIPUFda2qvBjuIbzitT0w12~Yx7wDQ91z2MkrglWMu625zlIEv~uEr4fQ9~tP0A__"
+        alt="pozition">
+    <img class="absolute z-0 top-[2176px] left-[250px]  xl:left-[]  lg:left-[] md:left-[100px] sm:left-[134px] w-[90px] h-[90px]"
+        src="https://s3-alpha-sig.figma.com/img/5016/4d74/452e525c991559f8fd2cd2721c253286?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QqvlRBrZzl~8U6horuOof7r7QsTubrzArjGHIWSg73QEsN48P1uwXAGmfTqE1HCK3YZJ5~5NbtPF8LhIjm5iFeGAk0DQ-gDlYdFeCwVW2PLaJ5vp26Z9eMT2jNVO9LuHzISN8Ee43ozhdIojOcMve668gj5vAnPnZpryx2cUKWeSAG4fHYGDbpDFLuI8DAL2-KL4byPtPSPtqY88zz4FZZx07nY0yoVQCoEb~fyvRuDNyJsOSFpc4kvoVXXPT5-gIsQLItvIiecIm6MUXMq8V9qpzT5Nr3lc9IjuhV7fbJYv4vdDmPBsUWz42AgkIE1vhOM6t4iVWNJK0xNKFDpHjA__"
+        alt="pozition">
+    <img class="absolute z-0 top-[1229px] left-[30px]  xl:left-[]  lg:left-[] md:left-[300px] sm:left-[105px] w-[66px] h-[75px]"
+        src="https://s3-alpha-sig.figma.com/img/8d78/1e7b/c23f52b32def3809dae88c16e5020951?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BC7l74TAsPGOPbKlz5PiJdJ9mF7FyXIzSGH7qR7fph0c8Cliib7ejmf8TywjvwsQthlYvbvF~UoOZfs8p4oFy6HDKzOKikTHniu8wGAweS-m555R2G~rAkL7BFa-IriYRN-CC2c0hQtKwisSGhs3R6JmttupVsDOKEl-FdjZpNdKqz3WBpYoJj8PQt0Jfr8HYKP-JLIWVYmmSMjt8NF6KLP1KF1u2~aRvao84IJGa-8DBIc5zut0AlW8XlFyAjap03FiAMwrY5jsnIGtXO64JUadIPUFda2qvBjuIbzitT0w12~Yx7wDQ91z2MkrglWMu625zlIEv~uEr4fQ9~tP0A__"
+        alt="pozition">
+    <img class="absolute z-0 top-[837px] left-[310px]  xl:left-[]  lg:left-[] md:left-[] sm:left-[193px] w-[43px] h-[45px]"
+        src="https://s3-alpha-sig.figma.com/img/5016/4d74/452e525c991559f8fd2cd2721c253286?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QqvlRBrZzl~8U6horuOof7r7QsTubrzArjGHIWSg73QEsN48P1uwXAGmfTqE1HCK3YZJ5~5NbtPF8LhIjm5iFeGAk0DQ-gDlYdFeCwVW2PLaJ5vp26Z9eMT2jNVO9LuHzISN8Ee43ozhdIojOcMve668gj5vAnPnZpryx2cUKWeSAG4fHYGDbpDFLuI8DAL2-KL4byPtPSPtqY88zz4FZZx07nY0yoVQCoEb~fyvRuDNyJsOSFpc4kvoVXXPT5-gIsQLItvIiecIm6MUXMq8V9qpzT5Nr3lc9IjuhV7fbJYv4vdDmPBsUWz42AgkIE1vhOM6t4iVWNJK0xNKFDpHjA__"
+        alt="pozition">
+    <img class="absolute z-0 top-[934px] left-[40px]  xl:left-[]  lg:left-[] md:left-[200px] sm:left-[138px] w-[43px] h-[45px]"
+        src="https://s3-alpha-sig.figma.com/img/5016/4d74/452e525c991559f8fd2cd2721c253286?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QqvlRBrZzl~8U6horuOof7r7QsTubrzArjGHIWSg73QEsN48P1uwXAGmfTqE1HCK3YZJ5~5NbtPF8LhIjm5iFeGAk0DQ-gDlYdFeCwVW2PLaJ5vp26Z9eMT2jNVO9LuHzISN8Ee43ozhdIojOcMve668gj5vAnPnZpryx2cUKWeSAG4fHYGDbpDFLuI8DAL2-KL4byPtPSPtqY88zz4FZZx07nY0yoVQCoEb~fyvRuDNyJsOSFpc4kvoVXXPT5-gIsQLItvIiecIm6MUXMq8V9qpzT5Nr3lc9IjuhV7fbJYv4vdDmPBsUWz42AgkIE1vhOM6t4iVWNJK0xNKFDpHjA__"
+        alt="pozition">
+
+    <!-- pozition -->
+    <section class=" flex flex-wrap justify-center m-3 items-center gap-5">
+        <div class="flex ">
+            <div class="">
+                <div class="font-bold text-indigo-950 text-6xl w-[500px] max-w-[600px]">
+                    <h1 class=" w-full text-center md:text-start">
+                        For Your Pet’s Natural Life & Care
+                    </h1>
+                    <p class="font-bold text-indigo-950 text-lg text-center md:text-start">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt
+                    </p>
+                </div>
+                <div class="flex gap-3 mb-7 justify-center md:justify-start">
+                    <button
+                        class=" p-1.5  text-xl bg-gradient-to-b from-orange-300  to-orange-400  justify-center text-center items-center text-white   flex mt-1   rounded-2xl frnt-bold ">Our
+                        Services</button>
+                    <button
+                        class=" p-1.5  text-xl bg-gradient-to-b from-green-300  to-green-400  justify-center text-center items-center text-white   flex mt-1   rounded-2xl frnt-bold ">Make
+                        Appointment</button>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="">
+            <img class=" w-[711.99px] h-[712.27px] bg-red-200 top-[200px] -z-10  bg-gradient-to-tr rounded-full object-contain from-red-100 to-red-200"
+                src="https://s3-alpha-sig.figma.com/img/699b/334e/3f113572b417a97fb72b7b7aafef75b1?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nANf8-re88IAIOpos9kzvqw3s1m7OB-SN7t2T4JI-9-MvB6cCo~zfT-rbHAlnxLgm8S5OPu40Vz9JLzs6ZDAxNB3bATijMHCc1fQ7WK5j43lMVFo1gkcRBfSqm5OwKgR8Jeg2zQDGl4SgWHC3xKoC~o7jgdpwv183Z3pm4wMIRq7afJq0ixImj5LIhrpcHp~1kJyvHVrDcnhFVwV94FdVbzuV4~OHY6TEL70pmb2ZFjgnO7d6~w6e~GRU~3mRD9Fk2lRtUfz81CDQatGFsWSnASebcUF4EisXvijz2SH5t3ruIXZcqUtjSlrTvO1Qxp2OrhgNkmHwT1YBUEgLEBHhQ__"
+                alt="">
+        </div>
+    </section>
+    </div>
+    </div>
+    <!-- section -->
+    <section class="container">
+        <div class="">
+            <div class="w-full h-6 gap-0 text-xl font-extrabold leading-7 text-center text-red-500">Care For Your Pet
+            </div>
+            <div class="h-20 gap-0 text-6xl font-extrabold text-center text-gray-800">What We Do</div>
+        </div>
+        <div class="flex gap-8 flex-wrap m-8 justify-center items-center">
+            <div class="w-[292px] h-[374px] rounded-lg bg-white flex  flex-wrap  justify-center items-center">
+                <div class="bg-gradient-to-t from-blue-200 to-blue-500 w-[100px] m-[50px] h-[100px] rounded-full">.
+                </div>
+                <div class="w-full h-8 text-2xl font-extrabold text-center text-gray-800">Pet Grooming</div>
+                <div class="w-56 h-20 text-lg font-normal leading-7 text-center text-gray-600">There are many
+                    variatio
+                    of
+                    passage of Lorem for a Ipsum available</div>
+            </div>
+            <div class="w-[292px] h-[374px] rounded-lg bg-white flex  flex-wrap  justify-center items-center">
+                <div class="bg-gradient-to-t from-red-300 to-orange-600 w-[100px] m-[50px] h-[100px] rounded-full">.
+                </div>
+                <div class="w-full h-8 text-2xl font-extrabold text-center text-gray-800">Veterinary</div>
+                <div class="w-56 h-20 text-lg font-normal leading-7 text-center text-gray-600">There are many
+                    variatio
+                    of
+                    passage of Lorem for a Ipsum available</div>
+            </div>
+            <div class="w-[292px] h-[374px] rounded-lg bg-white flex  flex-wrap  justify-center items-center">
+                <div class="bg-gradient-to-t from-red-200 to-orange-500 w-[100px] m-[50px] h-[100px] rounded-full">.
+                </div>
+                <div class="w-full h-8 text-2xl font-extrabold text-center text-gray-800">Dog Setting</div>
+                <div class="w-56 h-20 text-lg font-normal leading-7 text-center text-gray-600">There are many
+                    variatio
+                    of
+                    passage of Lorem for a Ipsum available</div>
+            </div>
+            <div class="w-[292px] h-[374px] rounded-lg bg-white flex  flex-wrap  justify-center items-center">
+                <div class="bg-gradient-to-t from-teal-200 to-teal-400 w-[100px] m-[50px] h-[100px] rounded-full">.
+                </div>
+                <div class="w-full h-8 text-2xl font-extrabold text-center text-gray-800">Healthy Meals</div>
+                <div class="w-56 h-20 text-lg font-normal leading-7 text-center text-gray-600">There are many
+                    variatio
+                    of
+                    passage of Lorem for a Ipsum available</div>
+            </div>
+        </div>
+    </section>
+    <section class=" flex flex-wrap w-full justify-center items-center ">
+
+        <div class="gap-[20px] w-[600px] flex flex-wrap  items-center m-6">
+            <p class="w-full h-6 gap-0 text-xl font-extrabold  text-center md:text-start text-red-500">Our Success Story
+            </p>
+            <h1 class="w-full font-bold text-indigo-950 text-6xl text-center md:text-start">Experience Vet Clinic
+                And Services</h1>
+            <div>
+                <p class="w-full font-bold text-indigo-950 text-lg text-center md:text-start">Aliquam erat volutpat In
+                    id fermentum augue, ut pellentesque Maecenas at arcu risus. Donec commodo sodales ex, scelerisque
+                    laoreet nibh hakso hendrerit id. In aliquet magna nec lobortis maximus.</p>
+                <div class="gap-9 m-6">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <img class="mb-7 w-[711.99px] h-[712.27px] bg-red-200 top-[200px] object-cover -z-10  bg-gradient-to-tr rounded-full from-red-100 to-red-200"
+                src="https://s3-alpha-sig.figma.com/img/ebac/3635/042ba03aafb7cde1a2490c0b524a23e7?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lroPQy1MYlx1TFrZwz7F2j-htIo9lH-9EO4s005G0zEDhLr7zHugJo0RqqChW3ELPJRNvXAd0vSPYE6JFhSUTA2nouSZUukAXguIXCLbr0vvAQccFN4-jqjGq4jEVVf-IUzwFd2cbH~gTvWugoRdRPp0fDRpXYbEG9VvX1amofSlsL64D~VFYqaPKtfFa5t9yfsvhEUPFJYOWsCE8UoCqEdLmpNxDzO~scx6BTQl5Q1-ADYSVpmVS1AIAfdR1P~wR5~fnf6~wflVLS-RPX1J7ateTaRbG9tRTmL2XWmsTx6RRcNoszFo4vlo9PqIZ4AYbu4nfwrTHoXey2lqI40UzA__"
+                alt="">
+        </div>
+    </section>
+
+    <!-- section -->
+    <div class=" justify-center items-center flex">
+        <section
+            class="max-w-[1440px] flex flex-wrap justify-center items-center gap-9 bg-orange-100 rounded-xl pt-5 mb-10">
+            <div class="flex text-center justify-center items-center flex-wrap ">
+                <div class="w-full h-6 gap-0 text-xl font-extrabold leading-7 text-center text-red-500">Our Team
+                </div>
+                <div class="h-20 gap-0 text-6xl font-extrabold text-center text-gray-800">Meet Our Groomers</div>
+            </div>
+            <div class="">
+                <div class=" flex flex-wrap justify-center items-center">
+                    <div class="flex gap-8 flex-wrap m-8 justify-center items-center">
+                        <div
+                            class="w-[292px] h-[374px] rounded-[100px] bg-white flex  flex-wrap  justify-center items-center">
+                            <div class=" w-48 h-48 m-[15px]  rounded-full flex justify-center items-center">
+                                <img class="w-48 h-48 m-[15px] bg-gradient-to-t from-blue-200 to-blue-500  rounded-full"
+                                    src="https://s3-alpha-sig.figma.com/img/f76c/c07a/d5de0ba4c69d6f637ba6093a8340721f?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bFVU5H5wM479Ad2BD2JIbttKzI07bzrZFKSsdOqhPBrM0R6xH91GAOZVp3R4gixmGunpp4QluswMkZbYrkPSl42ftPkyJQc3AAwY~x1b6~SfF1KtGkL8MF89yLIOnNuiBdq4MUl8SfDlh-OSvdlKoqxCOVqh0S6H1xRJaYOiMbOko~huhMH45lSEd6gLfEBJ0SUBVLi1x2dcOh87019kG7nerUuLJgK9BeKuviwO-Qu7cN1NtrGPgoErYXrSWVdA8ALOxreCoVplnqxu16Q61u8o2RLCT0vJU4WPsCEEIhOcvDI3gNH0~CBEh3B5gE9Nz7UjlrHNB-mVzN8i5u8C-w__"
+                                    alt="">
+                            </div>
+                            <div class="w-full h-8 text-2xl font-extrabold text-center text-gray-800">Rosalina Wiliam
+                            </div>
+                            <div class="w-32 h-6 text-lg leading-5 text-center text-red-500">CEO & Founder</div>
+                        </div>
+
+                    </div>
+                    <div class="flex gap-8 flex-wrap m-8 justify-center items-center">
+                        <div
+                            class="w-[292px] h-[374px] rounded-[100px] bg-white flex  flex-wrap  justify-center items-center">
+                            <div
+                                class=" w-48 h-48 m-[15px]  rounded-full flex justify-center items-center object-contain">
+                                <img class="w-48 h-48 m-[15px]  rounded-full bg-gradient-to-t from-yellow-200 to-yellow-500 object-contain"
+                                    src="https://s3-alpha-sig.figma.com/img/edfc/9e5d/e1ec2b9433bb94d9b698bc232d43309f?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JpAY1uL58frsVcemp1MBER~uz5BRenalIizRYLI2UobQshlABE9howjFhpGIlsVqWyQ4Xb0As7IZ9dr8gSusLNtJn~VaINfiMb0Ia77XOwe13csxXI2VDPjOZo6e7Sx-wFC9evc4-ETMdpb5yu895ryjiyTfbcMc3V-zME8OHefltEmv-DaiolXNVE8fuPcYcpnvWrua8fTXEP5V4~tk77Gii3pxy6awamoZRrfIqGJUzVA79cNdZnDUq~ea~6yrRRRTHgIq1EKtOIVoKnCrx1WYd4hQyPaXrJAHnwNGylwowbeG-CMCrcf5BTbVd7-xbyhcCxpCj11gYYc~FFoZ0w__"
+                                    alt="">
+                            </div>
+                            <div class="w-full h-8 text-2xl font-extrabold text-center text-gray-800">Rosalina Wiliam
+                            </div>
+                            <div class="w-32 h-6 text-lg leading-5 text-center text-red-500">CEO & Founder</div>
+                        </div>
+
+                    </div>
+                    <div class="flex gap-8 flex-wrap m-8 justify-center items-center">
+                        <div
+                            class="w-[292px] h-[374px] rounded-[100px] bg-white flex  flex-wrap  justify-center items-center">
+                            <div class=" w-48 h-48 m-[15px]  rounded-full flex justify-center items-center">
+                                <img class="w-48 h-48 m-[15px]  rounded-full bg-gradient-to-t from-red-200 to-orange-500"
+                                    src="https://s3-alpha-sig.figma.com/img/9a02/d293/d836d7f0c84627c5536dd9db9a16637e?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BPDFiKRpo9rANeEC-JU~GmNhi04cfZrt7giY8AhdT80gGjdZMq5uZ1afGW3xMU3ktsLlyLbfk9witmk1HuEylaGyuhua2Xyn-C1xfFA63Ehb5-YwSBelRjxkFqhCfTa56KB9Z~F418jIgjxfwqDq5qxrk815S9ot~PTXqAnzvkJ2GdYRp9pSyIMt~Dn9DP18raCUB1WSpnRRmR749FRyL0-tn7I7XHi-byfDUaSBMfatoy6G7z10XhUEbwVtLq7PbxL1Yt10-AANdL4JvwcILSut3dFiRX~YR-cKV5iumKMrxbWbCxbVwK3wwJrGpTEfZ425NeHRm0vroxYCKmkprg__"
+                                    alt="">
+                            </div>
+                            <div class="w-full h-8 text-2xl font-extrabold text-center text-gray-800">Rosalina Wiliam
+                            </div>
+                            <div class="w-32 h-6 text-lg leading-5 text-center text-red-500">CEO & Founder</div>
+                        </div>
+
+                    </div>
+                    <div class="flex gap-8 flex-wrap m-8 justify-center items-center">
+                        <div
+                            class="w-[292px] h-[374px] rounded-[100px] bg-white flex  flex-wrap  justify-center items-center">
+                            <div class=" w-48 h-48 m-[15px]  rounded-full flex justify-center items-center">
+                                <img class="w-48 h-48 m-[15px]  rounded-full bg-gradient-to-t from-teal-200 to-teal-400 object-contain"
+                                    src="https://s3-alpha-sig.figma.com/img/1330/4ee4/5ce6a4ef3cf5fa92ef24d8069334f2c4?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=af6hyoOxU8xhJQZDR9yqjjTLTiFhDrv6FlwSXJ8psyNxTQGmopYiN7IlHLkeFzRsNmZvbYgO8Ijs~kazQa51dUEUPyfOFnFX6jcnFkXEsBhI38lF32D2frzPcscObEQPm4mMSnRr1zwpo86VvtY~xjYdHms~62~vzX~qEt7Wgg9CpgO3x9qXP7RpX~iGve4oKMExxU0UHYpipIMel2NEELWpj9v0w69qb0g~UAQSVdKjafMHfphNqOwsCmZ2b8OHCp~InR5LpDCmegu1F2JO7V-7ozyds50FcCP-71zSNKVakwxO~le3kdKIz~n08a-uC3h3s7QFPPHXtlev6cAd5Q__"
+                                    alt="">
+                            </div>
+                            <div class="w-full h-8 text-2xl font-extrabold text-center text-gray-800">Rosalina Wiliam
+                            </div>
+                            <div class="w-32 h-6 text-lg leading-5 text-center text-red-500">CEO & Founder</div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- section -->
+    <section id="yourElementId " class=" w-full flex justify-center items-center text-center gap-5 sm:gap-0 lg:gap-5 flex-wrap">
+        <div
+            class=" bg-white rounded-2xl sm:rounded-r-none   lg:rounded-2xl hover:bg-gradient-to-t from-red-300 to-red-600 w-[300px] lg:w-[270px] h-[500px]   lg:h-[743px] gap-4 flex  flex-wrap justify-center items-center">
+            <div class="m-5 w-full">
+                <p class="text-3xl font-extrabold text-center hover:text-white">Exclusive Pack</p>
+                <h1 class="text-5xl font-extrabold text-center hover:text-white">10 Days</h1>
+            </div>
+            <div class="text-sm w-full font-extrabold text-center ">
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Pet Shower</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Fitness Checkup</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Pet Grooming</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Hair and Nail Cut</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Control Hair Falling</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Brush & Blow Dry</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Pet Park And Games</p>
+            </div>
+            <div class="w-full h-16 flex justify-center text-center items-center">
+                <h1 class="text-4xl font-extrabold leading-7 text-center flex hover:text-white">$350<p
+                        class="text-xl leading-6 text-center hover:text-white mb-1 align-text-top">Per Visit</p>
+                </h1>
+            </div>
+            <div class="w-full h-16 flex justify-center text-center items-center mb-3"><button
+                    class="text-xl font-bold leading-7 text-center text-white hover:text-red-500 bg-gradient-to-b from-red-300  to-red-400 hover:bg-white w-56 h-16 rounded-full">Purchase
+                    Pack</button></div>
+        </div>
+        <div
+            class=" bg-white rounded-2xl hover:bg-gradient-to-t from-red-300 to-red-600 w-[300px] h-[500px]  lg:w-[470px] sm:h-[743px] gap-4 flex  flex-wrap justify-center items-center">
+            <div class="m-5 w-full">
+                <p class="text-3xl font-extrabold text-center hover:text-white">Exclusive Pack</p>
+                <h1 class="text-5xl font-extrabold text-center hover:text-white">10 Days</h1>
+            </div>
+            <div class="text-sm w-full font-extrabold text-center ">
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 sm:mb-5">Pet Shower</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 sm:mb-5">Fitness Checkup</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 sm:mb-5">Pet Grooming</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 sm:mb-5">Hair and Nail Cut</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 sm:mb-5">Control Hair Falling</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 sm:mb-5">Brush & Blow Dry</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 sm:mb-5">Pet Park And Games</p>
+            </div>
+            <div class="w-full h-16 flex justify-center text-center items-center">
+                <h1 class="text-4xl font-extrabold leading-7 text-center flex hover:text-white">$350<p
+                        class="text-xl leading-6 text-center hover:text-white mb-1 align-text-top">Per Visit</p>
+                </h1>
+            </div>
+            <div class="w-full h-16 flex justify-center text-center items-center"><button
+                    class="text-xl font-bold leading-7 text-center text-white hover:text-red-500 bg-gradient-to-b from-red-300  to-red-400 hover:bg-white w-56 h-16 rounded-full">Purchase
+                    Pack</button></div>
+        </div>
+        <div
+            class=" bg-white rounded-2xl sm:rounded-l-none  rounded-bl-none   lg:rounded-2xl hover:bg-gradient-to-t from-red-300 to-red-600 w-[300px] lg:w-[270px] h-[500px]   lg:h-[743px] gap-4 flex  flex-wrap justify-center items-center">
+            <div class="m-5 w-full">
+                <p class="text-3xl font-extrabold text-center hover:text-white">Exclusive Pack</p>
+                <h1 class="text-5xl font-extrabold text-center hover:text-white">10 Days</h1>
+            </div>
+            <div class="text-sm w-full font-extrabold text-center ">
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Pet Shower</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Fitness Checkup</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Pet Grooming</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Hair and Nail Cut</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Control Hair Falling</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Brush & Blow Dry</p>
+                <p class="text-xl leading-6 text-center hover:text-white mb-0.5 lg::mb-5">Pet Park And Games</p>
+            </div>
+            <div class="w-full h-16 flex justify-center text-center items-center">
+                <h1 class="text-4xl font-extrabold leading-7 text-center flex hover:text-white">$350<p
+                        class="text-xl leading-6 text-center hover:text-white mb-1 align-text-top">Per Visit</p>
+                </h1>
+            </div>
+            <div class="w-full h-16 flex justify-center text-center items-center mb-3"><button
+                    class="text-xl font-bold leading-7 text-center text-white hover:text-red-500 bg-gradient-to-b from-red-300  to-red-400 hover:bg-white w-56 h-16 rounded-full">Purchase
+                    Pack</button></div>
+        </div>
+
+    </section>
+    <!-- section -->
+    <footer class="container rounded-xl bg-red-300  m-5">
+        <div class="flex flex-wrap justify-start items-start pt-5 gap-5">
+            <div class="h-64 w-[410px] text-center sm:text-start">
+                <a href="index.html">
+                    <h1 class="text-orange-400 flex font-black text-3xl">
+                        <p class="text-black font-black text-3xl">Vet</p>care
+                    </h1>
+                </a>
+                <p class="text-gray-600 font-black">Quisque id leo non dolor tempor elementum quis ac urna. Nam pharetra, ligula eget finibus dignissim, turpis ipsum sollicitudin</p>
+                <label for="">
+                    <input class="w-[390px] h-[60px] rounded-2xl mt-5 pl-5 absolute" type="text" value="exzampl@gmail.com">
+                </label>
+            </div>
+            <div class="flex flex-wrap w-[212px]">
+                <p class="text-2xl font-extrabold text-center hover:text-white">Address</p>
+                <ul>
+                    <li class="text-black hover:text-white">+23 384 485 29</li>
+                    <li class="text-black hover:text-white">vet@shamim.com</li>
+                    <li class="w-[211px] text-black hover:text-white">123 king street, Melbrown
+                        Victoria 3000, Australia</li>
+                </ul>
+            </div>
+            <div class="text-left">
+                <p class="text-2xl font-extrabold text-center text-black hover:text-white">Links</p>
+                <ul class="ml-7">
+                    <li class="text-black hover:text-white">About Us</li>
+                    <li class="text-black hover:text-white">Groomers</li>
+                    <li class="text-black hover:text-white">Contact Us</li>
+                    <li class="text-black hover:text-white">Privacy Policy</li>
+                    <li class="text-black hover:text-white">Tearms</li>
+                </ul>
+            </div>
+            <div>
+                <div class="text-left">
+                <p class="text-2xl font-extrabold text-center text-black hover:text-white">Opening Hours</p>
+                <ul class="ml-7">
+                    <li class="text-black hover:text-white">Monday-Tuesday 09:00-18:00</li>
+                    <li class="text-black hover:text-white">Wednesday 09:00-18:00</li>
+                    <li class="text-black hover:text-white">Thrusday-Friday 09:00-18:00</li>
+                    <li class="text-black hover:text-white">Saturday 10:00-17:00</li>
+                    <li class="text-black hover:text-white">Sunday 10:30-16:00</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="w-full flex justify-center items-center text-black hover:text-white">
+            <p>© Copyright 2021 - 2024 | Pet Theme by Md Shamim Hossain | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
